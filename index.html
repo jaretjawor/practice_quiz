@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Quiz</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f9f9f9; }
+        .quiz-container { max-width: 600px; margin: auto; background: #fff; padding: 24px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .question { margin-bottom: 24px; }
+        .solution { color: green; margin-top: 8px; }
+        .incorrect { color: red; }
+        .score {
+            font-size: 2em;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 16px;
+        }
+        button { padding: 10px 24px; font-size: 16px; border-radius: 4px; border: none; background: #007bff; color: #fff; cursor: pointer; }
+        button:disabled { background: #aaa; }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h2>Practice Quiz</h2>
+        <form id="quiz-form">
+            <!-- Questions will be injected here -->
+            <div id="questions"></div>
+            <button type="submit" id="submit-btn">Submit Answers</button>
+        </form>
+        <div id="results"></div>
+    </div>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="quiz.js"></script>
+</body>
+</html>
